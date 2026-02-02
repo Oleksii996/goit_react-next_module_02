@@ -1,8 +1,3 @@
-interface Book {
-  id: string;
-  name: string;
-}
-
 const books: Book[] = [
   { id: "id-1", name: "JS for beginners" },
   { id: "id-2", name: "React basics" },
@@ -14,8 +9,8 @@ export default function App() {
     <>
       <h1>Books of the week</h1>
       <ul>
-        {books.map((book) => (
-          <li key={book.id}>{book.name}</li>
+        {books.map((book, index) => (
+          <li key={index}>{book.name}</li>
         ))}
       </ul>
     </>

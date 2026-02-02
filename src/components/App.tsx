@@ -2,6 +2,8 @@
 
 import Product from "./Product";
 import Mailbox from "./Mailbox";
+import Book from "./Book";
+import Alert from "./Alert";
 
 export default function App() {
   return (
@@ -24,8 +26,18 @@ export default function App() {
 
       <Mailbox
         username="Alex"
-        messages={["Hello!", "Your order is ready", "Discount available"]}
+        messages={["efsf", "sdfsd", "sdfsd", "sdfsd", "sdfsd", "sdfsd"]}
       />
+
+      <hr />
+      <Book 
+      />
+
+      <hr />
+      <Alert />
+
+
     </>
   );
 }
+
