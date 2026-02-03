@@ -10,8 +10,19 @@ interface Values {
 export default function App() {
   const [values, setValues] = useState<Values>({ x: 0, y: 0 });
 
-  const updateX = () => {};
-  const updateY = () => {};
+  const updateX = () => {
+    setValues({
+      ...values,
+      x: values.x + 1,
+    });
+  };
+
+  const updateY = () => {
+    setValues({
+      ...values,
+      y: values.y + 1,
+    });
+  };
 
   return (
     <div>
