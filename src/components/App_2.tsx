@@ -1,10 +1,11 @@
-// src/components/App.tsx
+import { useState } from "react";
 
 export default function App() {
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    console.log("Clicked!", event);
-    console.log("Target:", event.target); // сам <button>
+  const [clicks, setClicks] = useState(0);
+
+  const handleClick = () => {
+    setClicks(clicks + 1);
   };
 
-  return <button onClick={handleClick}>Click me!</button>;
+  return <button onClick={handleClick}>Current: {clicks}</button>;
 }
